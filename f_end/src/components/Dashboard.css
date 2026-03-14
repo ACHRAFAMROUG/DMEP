@@ -1,0 +1,107 @@
+.db {
+  max-width: 1400px;
+  width: 100%;
+}
+
+.db__title-bar {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a2e3a;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* ── KPIs ── */
+.db__kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.db__kpi {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+  transition: box-shadow 0.15s;
+}
+
+.db__kpi:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.db__kpi-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.db__kpi-label {
+  font-size: 0.8rem;
+  color: #333;
+  font-weight: 600;
+  max-width: 130px;
+  line-height: 1.3;
+}
+
+.db__kpi-value {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1a2e3a;
+}
+
+.db__kpi-icon {
+  opacity: 0.65;
+  flex-shrink: 0;
+}
+
+/* ── Features ── */
+.db__features-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.db__features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.db__feature {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 24px 12px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.db__feature:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.db__feature-icon {
+  opacity: 0.6;
+}
+
+.db__feature-label {
+  font-size: 0.82rem;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+}

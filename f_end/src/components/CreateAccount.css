@@ -1,0 +1,316 @@
+/* ══ LAYOUT ══ */
+.create-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* formulaire gauche | image droite */
+  background: #f5f6fa;
+  min-height: calc(100vh - 120px);
+}
+
+/* ══════════════════════════════
+   GAUCHE — FORMULAIRE
+══════════════════════════════ */
+.create-left {
+  padding: 28px 40px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  overflow-y: auto;
+}
+
+.create-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a2e3a;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ══ FORM ══ */
+.create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ══ FIELD générique ══ */
+.cf-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* champ avec label inline (Date, Photo, Profile) */
+.cf-field--row {
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cf-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #34495e;
+  font-family: 'Tajawal', sans-serif;
+}
+
+/* ══ INPUT TEXT / EMAIL / TEL / PASSWORD ══ */
+.cf-field input[type="text"],
+.cf-field input[type="email"],
+.cf-field input[type="tel"],
+.cf-field input[type="password"] {
+  width: 100%;
+  padding: 10px 42px 10px 12px;
+  border: 1.5px solid #cfd8dc;
+  border-radius: 5px;
+  font-size: 0.87rem;
+  color: #2c3e50;
+  background: #f8fafc;
+  outline: none;
+  font-family: 'Tajawal', sans-serif;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cf-field input[type="text"]:focus,
+.cf-field input[type="email"]:focus,
+.cf-field input[type="tel"]:focus,
+.cf-field input[type="password"]:focus {
+  border-color: #1565c0;
+  box-shadow: 0 0 0 3px rgba(21,101,192,0.1);
+  background: white;
+}
+
+.cf-field input::placeholder {
+  color: #a0aab4;
+  font-size: 0.82rem;
+}
+
+/* ══ ERREUR ══ */
+.cf-field--error input,
+.cf-field--error select,
+.cf-field--error input[type="date"] {
+  border-color: #e74c3c !important;
+}
+
+.cf-error-msg {
+  font-size: 0.68rem;
+  color: #e74c3c;
+  font-family: 'Tajawal', sans-serif;
+}
+
+/* ══ ICON ══ */
+.cf-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #607d8b;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.cf-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* icon dans un wrapper relatif (date, file, select) */
+.cf-icon--inside {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ══ DATE ══ */
+.cf-date-wrap {
+  position: relative;
+}
+
+.cf-date-wrap input[type="date"] {
+  width: 100%;
+  padding: 10px 42px 10px 12px;
+  border: 1.5px solid #cfd8dc;
+  border-radius: 5px;
+  font-size: 0.87rem;
+  color: #2c3e50;
+  background: #f8fafc;
+  outline: none;
+  font-family: 'Tajawal', sans-serif;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.cf-date-wrap input[type="date"]:focus {
+  border-color: #1565c0;
+  box-shadow: 0 0 0 3px rgba(21,101,192,0.1);
+  background: white;
+}
+
+/* ══ FILE ══ */
+.cf-file-wrap {
+  position: relative;
+}
+
+.cf-file-wrap input[type="file"] {
+  width: 100%;
+  padding: 8px 42px 8px 10px;
+  border: 1.5px solid #cfd8dc;
+  border-radius: 5px;
+  font-size: 0.82rem;
+  background: #f8fafc;
+  font-family: 'Tajawal', sans-serif;
+  cursor: pointer;
+  color: #2c3e50;
+}
+
+/* ══ SELECT ══ */
+.cf-select-wrap {
+  position: relative;
+}
+
+.cf-select-wrap select {
+  width: 100%;
+  padding: 10px 42px 10px 12px;
+  border: 1.5px solid #cfd8dc;
+  border-radius: 5px;
+  font-size: 0.87rem;
+  color: #2c3e50;
+  background: #f8fafc;
+  outline: none;
+  font-family: 'Tajawal', sans-serif;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cf-select-wrap select:focus {
+  border-color: #1565c0;
+  box-shadow: 0 0 0 3px rgba(21,101,192,0.1);
+  background: white;
+}
+
+/* ══ BOUTONS ══ */
+.cf-btn {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Tajawal', sans-serif;
+  transition: opacity 0.2s, transform 0.15s;
+  letter-spacing: 0.3px;
+}
+
+.cf-btn:hover  { opacity: 0.87; transform: translateY(-1px); }
+.cf-btn:active { transform: translateY(0); }
+
+.cf-btn--valider {
+  background: #1565c0;
+  color: white;
+  box-shadow: 0 3px 10px rgba(21,101,192,0.3);
+}
+
+.cf-btn--annuler {
+  background: #1976d2;
+  color: white;
+  box-shadow: 0 3px 10px rgba(25,118,210,0.25);
+}
+
+.cf-btn--deja {
+  background: #1e88e5;
+  color: white;
+  box-shadow: 0 3px 10px rgba(30,136,229,0.22);
+}
+
+/* ══════════════════════════════
+   DROITE — IMAGE
+══════════════════════════════ */
+.create-right {
+  position: relative;
+  overflow: hidden;
+}
+
+.create-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.create-right__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.04) 0%,
+    rgba(0,0,0,0.2)  100%
+  );
+  pointer-events: none;
+}
+
+.create-right__lang {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  background: rgba(0,0,0,0.55);
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: 'Tajawal', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ══ BOUTON LANGUE ══ */
+.create-right__lang {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0,0,0,0.55);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.65);
+  font-size: 0.78rem;
+  font-family: 'Tajawal', sans-serif;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 3px;
+  transition: color 0.2s, background 0.2s;
+  font-weight: 400;
+}
+
+.lang-btn--active {
+  color: white;
+  font-weight: 700;
+  background: rgba(255,255,255,0.15);
+}
+
+.lang-btn:hover:not(.lang-btn--active) {
+  color: white;
+}
+
+.lang-sep {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.75rem;
+}
+
+/* ══ RESPONSIVE ══ */
+@media (max-width: 768px) {
+  .create-main            { grid-template-columns: 1fr; }
+  .create-right           { display: none; }
+  .create-left            { padding: 20px 16px; }
+}

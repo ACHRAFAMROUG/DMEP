@@ -1,0 +1,94 @@
+.img-side {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  background: #0e2030;
+}
+
+.img-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  opacity: 0.88;
+}
+
+.img-side__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(26,82,118,0.18) 0%,
+    transparent 55%,
+    rgba(236,240,241,0.92) 100%
+  );
+  pointer-events: none;
+}
+
+.img-side__caption {
+  position: absolute;
+  bottom: 50px;
+  left: 22px;
+  color: white;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.7);
+}
+
+.img-side__caption h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.img-side__caption p {
+  font-size: 0.72rem;
+  opacity: 0.88;
+  margin-top: 3px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+/* ══ BOUTON FR/AR ══ */
+.img-side__lang {
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0,0,0,0.55);
+  padding: 5px 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.img-lang__btn {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.65);
+  font-size: 0.8rem;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 10px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.img-lang__btn--active {
+  color: white;
+  font-weight: 700;
+  background: rgba(255,255,255,0.2);
+}
+
+.img-lang__btn:hover:not(.img-lang__btn--active) {
+  color: white;
+}
+
+.img-lang__sep {
+  color: rgba(255,255,255,0.35);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 768px) {
+  .img-side { display: none; }
+}

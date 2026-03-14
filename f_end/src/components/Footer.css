@@ -1,0 +1,16 @@
+.footer {
+  background: #ffffff;
+  color: rgba(0, 0, 0, 0.68);
+  padding: 19px 22px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.footer__version {
+  color: rgba(255,255,255,0.42);
+  font-size: 0.67rem;
+  white-space: nowrap;
+}

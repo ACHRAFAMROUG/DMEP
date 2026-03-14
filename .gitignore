@@ -1,0 +1,15 @@
+# Laravel Backend
+backend/vendor/
+backend/.env
+backend/storage/logs/
+backend/storage/framework/cache/
+backend/bootstrap/cache/
+
+# React Frontend
+f_end/node_modules/
+f_end/build/
+
+# Divers
+*.log
+.DS_Store
+Thumbs.db
