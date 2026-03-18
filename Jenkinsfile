@@ -45,12 +45,12 @@ pipeline {
         }
 
         stage('Deploy') {
-            steps {
-                echo '🚀 Déploiement...'
-                sh "docker-compose down || true"
-                sh "docker-compose up -d"
-            }
-        }
+    steps {
+        echo '🚀 Déploiement...'
+        sh "docker compose down || true"
+        sh "docker compose up -d"
+    }
+}
     }
 
     post {
