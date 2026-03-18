@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_HUB_USER = 'achrafamroug'
+        DOCKER_HUB_USER = 'achrafamrok'
         BACKEND_IMAGE   = "${DOCKER_HUB_USER}/dmep-backend"
         FRONTEND_IMAGE  = "${DOCKER_HUB_USER}/dmep-frontend"
     }
